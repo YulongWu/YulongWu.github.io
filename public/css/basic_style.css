@@ -202,10 +202,12 @@ h3 {
 
 .post_content img {
 	display: block;
-	margin: 0 0 1em;
 	border-radius: 0.5em;
-	max-width: 100%;
+	max-width: 67%;
 	max-height: 100%;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post_content p {
