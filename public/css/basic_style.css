@@ -1,0 +1,374 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #515151;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: red;
+	text-decoration: none;
+}
+
+
+body {
+	color: #515151;
+	background-color: #fff;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-family: "Segoe UI",Segoe,Tahoma,Arial,DroidSans,"Droid Sans",Helvetica,Verdana,sans-serif;
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.1em;
+	padding-bottom: 0.5em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1em;
+	font-weight: normal;
+	padding-left: 1em;
+}
+
+h3 {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.mainbody {
+	min-width: 24em;
+	max-width: 45em;
+	margin: 0 auto;
+	padding: 0.5em;
+	text-align: left;
+	font-size: 1em;
+}
+
+.blog_head {
+	padding: 1em 0em 2em 0em;
+}
+
+.blog_head .blog_title {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 0em 0.5em 0em 0em;
+	color: #A33;
+	display: inline-block;
+}
+
+.blog_head .blog_word {
+	font-size: 0.9em;
+	color: gray;
+	display: inline-block;
+	text-shadow: 0.1em 0.1em 0.1em;
+}
+
+.list_post {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.85em;
+	margin: 0.5em 0em 1em 0em;
+}
+
+.list_post td {
+	vertical-align: top;
+	padding: 0.3em 0em;
+}
+
+.list_cat_td {
+	width: 5.5em;
+	text-align: right;
+	overflow: hidden;
+}
+
+.list_fixed_tm {
+	width: 5.5em;
+	font-size: 0.9em;
+}
+
+.list_cat_link, .list_tag_link {
+	padding: 0em 0.2em 0em 0.2em;
+	color: #999;
+	font-style: italic;
+}
+
+.list_post_link {
+	padding: 0em 0.5em 0em 0.2em;
+}
+
+.list_post_cats, .list_post_tags, .post_date {
+	font-size: 0.9em;
+	display: inline-block;
+}
+
+.list_category, .list_tag {
+	margin: 1em 1em 2em 1em;
+}
+
+.list_cat_btn, .list_tag_btn {
+	background-color: #DDD;
+	padding: 0.1em 0.4em 0.1em 0.4em;
+	margin: 0.2em 0.5em 0.2em 0.5em;
+	border-radius: 0.2em;
+	display: inline-block;
+}
+
+.post_supertitle {
+	font-size: 0.9em;
+	padding: 0em 0em 0.5em 0em;
+	display: block;
+}
+
+.post_info, .post_content, .post_license, .post_share, .post_comment {
+	clear: both;
+}
+
+.post_info {
+	padding: 0.5em 0em 0.6em 1em;
+	border-bottom: 1px solid #AAA;
+	font-size: 0.85em;
+}
+	.post_info span {
+		padding: 0em 1em 0em 0em;
+	}
+
+.post_content {
+	font-size: 0.9em;
+	margin: 1em 0.5em;
+}
+
+
+.post_content code, .post_content pre {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+.post_content code {
+	padding: 0.1em 0.3em;
+	margin: 0em 0.4em;
+	font-size: 0.9em;
+	color: #bf616a;
+	background-color: #f9f9f9;
+	border-radius: 0.1em;
+	display: inline-block;
+}
+
+.post_content pre {
+	border-radius: 0.2em;
+	display: block;
+	margin-top: 0;
+	margin-bottom: 1em;
+	padding: 1em;
+	font-size: 0.9em;
+	line-height: 1.4;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: rgb(29,30,25);
+}
+
+.post_content pre code {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+.post_content .highlight {
+	margin-bottom: 1em;
+	border-radius: 0.2em;
+}
+
+	.post_content .highlight pre {
+		margin-bottom: 0;
+	}
+
+
+.post_content blockquote {
+	padding: 0em 0.5em;
+	margin: 0.5em 0em;
+	color: #7a7a7a;
+	border-left: 0.25em solid #e5e5e5;
+}
+
+	.post_content blockquote p:last-child {
+		margin-bottom: 0;
+	}
+
+.post_content img {
+	display: block;
+	margin: 0 0 1em;
+	border-radius: 0.5em;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.post_content p {
+	margin: 0.8em 0.1em 0.4em 0.2em;
+	line-height: 1.8em;
+}
+
+.post_content h1 {
+    font-size: 1.2em;
+    margin: 1.6em 0.1em 0.8em 0.2em;
+}
+
+.post_content h3 {
+    font-size: 1.1em;
+    margin: 1.4em 0.1em 0.7em 0.2em;
+}
+
+.post_content h3 {
+	font-size: 1.1em;
+	margin: 1.2em 0.1em 0.6em 0.2em;
+}
+
+.post_content h4 {
+	font-size: 1em;
+	margin: 1em 0.1em 0.5em 0.2em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.post_content h5 {
+    font-size: 1em;
+    margin: 0.8em 0.1em 0.4em 0.2em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.post_content table {
+	margin-bottom: 1em;
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	border-collapse: collapse;
+}
+.post_content td, .post_content th {
+	padding: 0.2em 0.5em;
+	border: 1px solid #e5e5e5;
+}
+
+.post_content tbody tr:nth-child(odd) td, .post_content tbody tr:nth-child(odd) th {
+	background-color: #f9f9f9;
+}
+
+.post_content table td p, .post_content table th p{
+	margin: 0;
+	padding: 0;
+}
+
+.post_content a {
+	padding: 0em 0.5em 0em 0.5em;
+	display: inline-block;
+}
+	.post_content a:before {
+		content: "\f08e\00a0";
+		font: normal normal normal 14px/1 FontAwesome;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+.post_content ol, .post_content ul {
+	margin-left: 1em;
+}
+
+.post_license {
+	font-size: 0.8em;
+	line-height: 1.6em;
+	margin: 2em 0.2em 1em 0.2em;
+	text-align: right;
+	min-height: 3.2em;
+}
+
+.post_license .lccimg {
+	height: 1.6em;
+	margin: 0em 0.5em -0.5em 0.5em;
+	float: right;
+}
+
+.post_license .ccimg {
+	height: 2.98em;
+	margin: 0em 0.5em -0.5em 0.5em;
+	float: right;
+}
+
+.post_license .show_cc {
+	display: block;
+}
+
+.post_license .hide_cc {
+	display: none;
+}
+
+.post_license a {
+	color: #900;
+}
+
+.post_share {
+	text-align: right;
+	margin: 0.5em;
+}
+
+.post_share .sharetext {
+	font-size: 1em;
+	color: gray;
+	padding: 0em 0.4em;
+}
+
+.post_share .sharebutton {
+	font-size: 1.4em;
+	margin: 0em 0.1em;
+}
+
+.post_comment {
+	text-align: right;
+	margin: 1em 0.5em 0.5em 0.5em;
+	border-top: 2px dotted #AAA;
+}
+
+.footer {
+	font-size: 0.8em;
+	margin-top: 2em;
+	padding: 0.6em 0em 0.6em 0em;
+	border-top: 1px solid #AAA;
+	text-align: center;
+}
+
+.footer .links {
+	font-size: 1.4em;
+}
+
+
+@media only screen and (max-width: 32em) {
+	.optional {
+		display: none;
+	}
+	.list_cat_td {
+		width: 2.5em;
+	}
+	.post_license .cctext {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 18em) and (max-width: 24em) {
+    .mainbody {
+    	min-width: 18em;
+    	font-size: 0.9em; 
+    }
+}
+
+@media only screen and (min-width: 12em) and (max-width: 18em) {
+	.mainbody {
+		min-width: 12em;
+		font-size: 0.6em;
+	}
+}
+
+

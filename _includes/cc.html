@@ -1,0 +1,23 @@
+
+{% capture cclicense %}{{ page.cc.cclicense | downcase }}{% endcapture %}
+{% capture ccversion %}{{ page.cc.ccversion | downcase }}{% endcapture %}
+{% capture officialurl %}{{ site.url }}{{ page.url | replace:'/index.html','/'}}{% endcapture %}
+
+{% case page.cc.ccdisplay %}
+{% when 's-cc-logo' %}
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/{{ cclicense }}/{{ ccversion }}/"><img alt="Creative Commons License" class="lccimg" src="/public/img/cc/l-cc-{{ cclicense }}.png" /></a>
+{% when 'l-cc-logo' %}
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/{{ cclicense }}/{{ ccversion }}/"><img alt="Creative Commons License" class="ccimg" src="/public/img/cc/cc-{{ cclicense }}.png" /></a>
+{% else %}
+{% endcase %}
+
+<span class="cctext">
+<span class="{% if page.cc.ccauthor == 'show' and page.cc.ccdisplay == 'l-cc-logo' %}show{% else %}hide{% endif %}_cc">
+By <a href="{{ officialurl }}" xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName" rel="cc:attributionURL" title="{{ page.title | escape }}">{{ site.author.name }}</a> | Contact <a href="mailto:{{ site.author.email }}">Me</a> 
+{% if site.permissions != null %}
+| <a xmlns:cc="http://creativecommons.org/ns#" href="{{ site.url}}{{ site.permissions }}" target="_blank" rel="cc:morePermissions">Permissions</a>
+{% endif %}
+</span>
+<span class="{% if page.cc.cctext == 'show' %}show{% else %}hide{% endif %}_cc"><a xmlns:dct="http://purl.org/dc/terms/" property="dct:title" href="{{ officialurl }}" title="{{ page.title | escape }}">{{ page.title}}</a> is licensed under <a rel="license" target="_blank" href="http://creativecommons.org/licenses/{{ cclicense }}/{{ ccversion }}/">CC {{ cclicense | upcase }} {{ ccversion | upcase }}</a>
+</span>
+</span>

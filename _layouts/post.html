@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<div class="post_info">
+{% capture visualdate %}{% if page.lastupdate != null%}{{ page.lastupdate }}{% else %}{{ page.date }}{% endif %}{% endcapture %}
+<span class="post_date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;{{ visualdate | date:"%Y-%m-%d" }}</span>
+{% if page.categories != null and page.categories.size != 0 %}
+<span class="list_post_cats">
+  <i class="fa fa-book"></i>&nbsp;
+  {% for cat in page.categories %}
+      <a class="list_cat_link" href="/category.html#{{ cat }}">{{ cat }}</a>
+  {% endfor %}
+</span>
+{% endif %}
+{% if page.tags != null and page.tags.size != 0 %}
+<span class="list_post_tags">
+  <i class="fa fa-tags"></i>&nbsp;
+    {% for tag in page.tags %}
+      <a class="list_tag_link" href="/tag.html#{{ tag }}">#{{ tag }}</a>
+    {% endfor %}
+    {% for tag in page.ctag %}
+      {% capture etag %}{{ page.tags[forloop.index0] }}{% endcapture %}
+      {% if tag != etag %}
+      <a class="list_tag_link" href="/tag.html#{{ etag }}">#{{ tag }}</a>
+      {% endif %}
+    {% endfor %}
+  </span>
+  {% endif %}
+</div>
+<div class="post_content" id="post_content">
+  {{ content }}
+</div>
+{% if page.ispost == true %}
+<div class="post_license">
+  {% include cc.html %}
+</div>
+<div class="post_share">
+  {% include share.html %}
+</div>
+<div class="post_comment">
+  {% if page.comment == true %}{% include comment.html %}{% endif %}
+</div>
+
+{% endif %}
+
+<script type="text/javascript">
+(function(){ 
+  var postContent = document.getElementById('post_content');
+  var anchors = postContent == null ? null : postContent.getElementsByTagName('a');
+  if(anchors == null || anchors.length == 0)
+    return;
+  for(var i = 0; i < anchors.length; i++) {
+    var href = anchors[i].href;
+    if(href != null && href != '' 
+      && (href.startsWith('http://') || href.startsWith('https://'))
+      && !href.startsWith(window.location.protocol + '//' + window.location.hostname)) {
+      setAttribute(anchors[i], 'target', '_blank');
+    }
+  }
+})();
+</script>

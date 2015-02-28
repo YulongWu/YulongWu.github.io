@@ -1,0 +1,14 @@
+{% capture officialurl %}{{ site.url }}{{ page.url | replace:'/index.html','/' }}{% endcapture %}
+{% capture posttitle %}{{ page.title }} - {{ site.title }}{% endcapture %}
+
+<span class="sharearea">
+<i class="fa fa-share-square-o sharetext"></i>
+
+<a href="http://www.facebook.com/share.php?u={{ officialurl | cgi_escape }}" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square sharebutton" style="color:#4c66a4"></i></a>
+
+<a href="https://plus.google.com/share?url={{ officialurl | cgi_escape }}" target="_blank" title="Share on Google Plus"><i class="fa fa-google-plus-square sharebutton" style="color:#d34836"></i></a>
+
+<a href="http://v.t.sina.com.cn/share/share.php?url={{ officialurl | cgi_escape }}&amp;title={{ posttitle | cgi_escape }}" target="_blank" title="分享到新浪微博"><i class="fa fa-weibo sharebutton" style="color:#e64141"></i></a>
+
+<a href="http://share.renren.com/share/buttonshare?link={{ officialurl | cgi_escape }}&amp;title={{ posttitle | cgi_escape }}" target="_blank" title="分享到人人网"><i class="fa fa-renren sharebutton" style="color:#226fb1"></i></a>
+</span>

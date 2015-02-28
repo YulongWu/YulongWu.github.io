@@ -1,0 +1,32 @@
+---
+layout: 	default
+title: 		All Tags
+---
+
+<div class="list_tag">
+{% for tag in site.tags %}
+<a class="list_tag_btn" href="/tag.html#{{ tag[0] }}"><i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}</a>
+{% endfor %}
+</div>
+
+
+{% for tag in site.tags %}
+<h2 id="{{ tag[0] }}" name="{{ tag[0] }}"><i class="fa fa-tag"></i>&nbsp;{{ tag[0] }}</h2>
+
+<table class="list_post">
+{% for post in tag[1] %}
+<tr>
+	<td class="list_cat_td">
+		<a class="list_cat_link optional" href="/category.html#{{ post.categories | first }}">{{ post.categories | first }}</a>
+	</td>
+	<td>
+		<a class="list_post_link" href="{{ post.url }}">{{ post.title }}</a>
+	</td>
+	<td class="list_fixed_tm">
+		{% capture visualdate %}{% if post.lastupdate != null%}{{ post.lastupdate }}{% else %}{{ post.date }}{% endif %}{% endcapture %}
+		<span class="time_ymd">{{ visualdate | date:"%Y-%m-%d" }}</span>
+	</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}

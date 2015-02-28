@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% include head.html %}
+{% include js_utility.html %}
+	<body>
+		<div class="mainbody">
+			<div class="blog_head"><a class="blog_title" href="{{ site.url }}/">{{ site.title }}</a>&nbsp;<span class="blog_word">{{ site.tagline }}</span></div>
+			<div>
+			{% if page.supertitle != null %}<strong class="post_supertitle">{{ page.supertitle }}</strong>{% endif %}
+			<h1 class="post_title"><i class="fa fa-quote-left"></i>&nbsp;&nbsp;{{ page.title }}&nbsp;&nbsp;<i class="fa fa-quote-right"></i></h1>
+			</div>
+			{{ content }}
+			{% include footer.html %}
+		</div>
+	</body>
+</html>
