@@ -1,2 +1,2 @@
 # YulongWu.github.io
-For GitHub pages.
+My personal blog built by GitHub pages.
