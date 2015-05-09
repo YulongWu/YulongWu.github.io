@@ -51,7 +51,7 @@ permissions: "/permissions.html"
 # share to social media: ["Facebook", "Twitter", "Google Plus", "Digg", "Renren", "Tumblr", "WeChat", "Weibo"]
 shares: ["Facebook"]
 
-disqus_shortname: "zhangweiblog"
+disqus_shortname: "frankiewublog"
 
 # global variables - author related
 author: 
