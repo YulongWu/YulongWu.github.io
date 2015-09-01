@@ -155,6 +155,7 @@ u'\u4e00\u70b9\u8d44\u8baf'
 最后的最后，请大家记住关于字符编码的一个关键点：Unicode本身只是一个规定了字符极其对应编码数值对照表，而UTF-8, UTF-16等均是将数值对应为具体存储在计算机中的编码的实现方法。做个比喻的话，Unicode相当于RFC制定的一套规范，而UTF-8, UTF-16等都是对这套规范的不同版本的实现，当然支持的程度（可编码字符的多少）也各不相同。
 
 ## Reference:
+
 [1] : [http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
 
 [2] : [http://blog.csdn.net/softman11/article/details/6124345](http://blog.csdn.net/softman11/article/details/6124345)
